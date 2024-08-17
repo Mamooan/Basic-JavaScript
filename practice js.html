@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // ...................................part 2.................................
+
+        // 1. If the user enters a number greater than 10,
+        //      print "Number is greater than 10," otherwise print
+        //      "Number is not greater than 10."
+
+
+        // var a=Number(prompt('put any number'))
+        // if(a>10){
+        //     alert('a is greater than 10')
+        // }
+        // else{
+        //     alert('a is not greater than 10')
+        // }
+
+
+
+        // 2.If a person's age is less than 18, display "You are a minor,"
+        //  otherwise display "You are an adult."
+
+
+        // var a=+(prompt('enter your age'))
+        // if(a>18){
+        //     alert('You are an adult')
+        // }
+        // else if(a<18){
+        //     alert('You are a minor')
+        // }
+
+
+
+        // 3. If a student's score is above 90, assign them a grade of 'A'.
+        //  Otherwise, assign them a grade of 'B'.
+
+
+
+
+        // var a=+(prompt('enter your text number'))
+        // if(a>90 && a<101){
+        //     alert('A')
+        // }
+        // if(a<90){
+        //     alert('b')
+        // }
+        // else{
+        //     alert('Total Marks 100')
+        // }
+
+
+
+
+
+        // 4. If the current time is before 12 PM,
+        //  display "Good morning," otherwise display "Good afternoon."
+
+
+        // var a=+(prompt('enter your time'))
+        // if(a<12){
+        //     alert('Good Morning')
+        // }
+        // if(a>12){
+        //     alert('Afternoon')
+        // }
+
+
+
+
+
+
+
+        // 5. If a triangle has all three sides equal, print "Equilateral 
+        // triangle," otherwise print "Not an equilateral triangle."
+
+        // var top_side = prompt("enter the top side")
+        // var left_side = prompt("enter the left side")
+        // var right_side = prompt("enter the right side")
+        // if (top_side == left_side && left_side == right_side) {
+        //     alert("all equals")
+        // }
+        // else {
+        //     alert("not equal")
+        // }
+
+
+
+
+
+
+
+
+
+        // 6. If a number is divisible by both 2 and 3, print "Divisible
+        //  by 2 and 3," otherwise print "Not divisible by 2 and 3."
+
+
+
+        // var num = +prompt('Enter your Number');
+        // if (num % 2 == 0 && num % 3 == 0) {
+        //     alert('it is Divisible')
+        // }
+        // else {
+        //     alert('it is not Divisible')
+        // }
+
+
+
+        // 7. If a user's username is "admin" and password is "password123",
+        //  display "Login successful," otherwise display "Login failed."
+
+
+        // var d = prompt('Enter your account');
+        // var e = prompt('Enter your password')
+        // if (d == 'admin' && e == 'password123'){
+        //     alert('Login successful')
+        // }
+        // else {
+        //     alert('Login faled')
+        // }
+
+
+
+
+
+
+
+        // 8. If a year is a leap year, print "Leap year,"
+        //  otherwise print "Not a leap year."
+
+
+
+        // var f=+prompt('Enter any year');
+        // if(f%2 == 0){
+        //      alert('leap year')
+        // }
+        // else{
+        //     alert('Not a leap year')
+        // }
+
+
+        // 9. If a person's BMI (Body Mass Index) is below 18.5, display
+        // "Underweight," if it's between 18.5 and 24.9, display "Normal weight,"
+        //  and if it's above 24.9, display "Overweight."
+
+
+        // var c=+prompt('Put your weoght')
+        // if(c<18.5){
+        //     alert('you are Underweight')
+        // }
+        // else if(c>18.5 && c<24.9){
+        //     alert('you are Normalweight')
+        // }
+        // else if(c>24.9){
+        //     alert('you are Overweight')
+        // }
+
+
+
+
+
+        // 10. If a number is positive, print "Positive," if it'
+        // s negative, print "Negative," and if it's zero, print "Zero."
+
+
+        // var g=+prompt('Enter any number');
+        // if(g<0){
+        //    alert('Negative')
+        // }
+        // if(g>0){
+        //    alert('Positive')
+        // }
+        // if(g==0){
+        //    alert('zero')
+        // }
+
+        // .................................part 1..................................
+
+        // 1) Even or Odd: Write a program that takes a number as input and
+        //  uses an if statement to determine if it's even or odd.
+
+
+        // var a =+prompt('Enter your number');
+
+        // if(a%2 == 0){
+        //     alert(`${a} is Even`)
+        // }
+        // else{
+        //     alert(`${a} is Odd`)
+        // }
+
+
+        // 2) Age Verification: Create a script that asks for a user's
+        //  age and uses an if statement to check if they are old enough
+        //   to enter a website (e.g., 18 years or older).
+
+
+        // var e=+prompt("Enter your age");
+        // if(e>18){
+        //   alert("you are edult")
+        // }
+        // else{
+        //     alert("you are not edult")
+        // }
+
+
+
+
+
+
+
+        // 3) Password Validation: Write a program that prompts the user
+        //  to enter a password and checks if it meets certain criteria
+        //   (e.g., minimum length or specific characters).
+
+
+        // var b=+prompt('Enter your password')
+
+        // if(b.lenght>8){
+        //     alert(`${b} is strong Password`)
+        // }
+        // else if(b.lenght == 8){
+        //     alert(`${b} is normol Password`)
+        // }
+        // else{
+        //     alert(`${b} is week Password`)
+        // }
+
+
+
+
+
+        // 4) Grade Calculator: Develop a script that calculates and displays
+        //  a student's letter grade (A, B, C, D, or F) based on their numerical
+        //   score using an if statement.
+
+
+
+
+        // var a=+prompt('enter your grade')
+        // if(a>90 && a<101){
+        //     alert('+A')
+        // }
+        // if(a>80 && a<89){
+        //     alert('A')
+        // }
+        // if(a>70 && a<79){
+        //     alert('+B')
+        // }
+        // if(a>60 && a<69){
+        //     alert('B')
+        // }
+        // if(a>50 && a<59){
+        //     alert('c')
+        // }
+        // if(a>40 && a<49){
+        //     alert('D')
+        // }
+        // if(a>34 && a<39){
+        //     alert('E')
+        // }
+        // if(a>0 && a<33){
+        //     alert('F')
+        //  } 
+
+
+
+        // 5) Leap Year Checker: Create a function that checks if a
+        //  given year is a leap year (divisible by 4, except for years
+        //   divisible by 100 but not by 400) using if statements.
+
+
+
+        // var w=+prompt("Enter your year")
+
+        // if((w % 4 == 0 && w % 100 !==0)|| w % 400==0) {
+        //   alert("leap year")
+        // }
+        // else{
+        //     alert("not leap year")
+        // }
+
+
+
+        // Q 6) Temperature Converter: Build a temperature converter that allows users to input a temperature in Celsius and converts it to Fahrenheit, using if statements for conversion.
+
+        // var celsius = prompt("enter the value of celsius")
+        // var value = ( celsius  * 9/5 +32)
+        // alert(`value of celsius ${value}`)
+        // console.log(value);
+
+
+
+
+
+
+        // 7) Traffic Light Simulator: Simulate a traffic light with red, yellow,
+        //  and green signals. Use if statements to control the flow of the signals.
+
+
+        // var w=prompt('Enter Traffic color');
+        // if(w == "red"){
+        //     alert("stop")
+        // }
+        // if(w == "yellow"){
+        //     alert("ready")
+        // }
+        // if(w == "green"){
+        //     alert("you want to go")
+        // }
+
+
+
+
+
+        // 8) User Role Access: Create a system that checks a user's role
+        //  (e.g., "admin," "user," or "guest") and grants or restricts access
+        //   to certain parts of a website accordingly.
+
+
+        // var f=prompt('Enter your Role');
+        // if(f=="admin"){
+        //     alert('Login admin account')
+        // }
+        // else if(f=="user"){
+        //     alert('Login user account')
+        // }
+        // else if(f=="guest"){
+        //     alert('Login guest account')
+        // }
+        // else{
+        //     alert('not login')
+        // }
+
+
+
+
+
+
+        // 9) BMI Calculator: Build a BMI(Body Mass Index) calculator that takes
+        //  a person's height and weight as inputs and provides a BMI category
+        //   (e.g., underweight, normal, overweight) using if statements.
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

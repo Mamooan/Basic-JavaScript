@@ -1,0 +1,471 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ca{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+    <input type="text" id="inp1">
+    <button>Add</button>
+    <button class="ca">Upload</button>
+    <ul></ul>
+    
+
+
+    <script>
+
+        var inp=document.getElementById("inp");
+        var inp1=document.getElementById("inp1");
+        var but=document.querySelector("button");
+        var c=document.querySelector(".ca");
+        var ul=document.querySelector("ul")
+
+console.log(inp1,inp);
+    but.addEventListener("click",()=>{
+
+        var data=localStorage.getItem("item") ? JSON.parse(localStorage.getItem("item")) : []
+        
+        if (inp.value==0 && inp1.value) {
+            alert("plz put the any thing")
+        }
+        else{
+            var object={
+                inp:inp.value,
+                inp1:inp1.value,
+            }
+            data.push(object)
+        }
+        localStorage.setItem("item" , JSON.stringify(data))
+        inp.value=""
+        inp1.value=""
+        creatli()
+    })
+    function creatli() {
+        var data=JSON.parse(localStorage.getItem("item"))
+        ul.innerHTML=""
+        data.forEach((ele,index) => {
+            var li=document.createElement("li")
+            li.innerHTML=`${index} == ${ele.inp}${ele.inp1} ==  <button onclick="Edit(${index})">Edit</button> <button onclick="Down(${index})">Down</button>  <button  onclick="Up(${index})">Up</button>  <button onclick="Del(${index})">Del</button> `
+            ul.appendChild(li)
+        });
+        
+        localStorage.setItem("item" , JSON.stringify(data))
+    }
+    function Up(i) {
+        // console.log(i);
+        var data=JSON.parse(localStorage.getItem("item"))
+        if (i==0) {
+            alert("don,t go Up")
+        }
+        else{
+            // var bb=data.splice(i,1)//.....................
+            // data.splice(i-1,0,bb)
+            var bb=data[i]
+            data[i]= data[i-1]
+            data[i-1]=bb
+        }
+        localStorage.setItem("item" , JSON.stringify(data))
+        creatli()
+    }
+    function Down(i) {
+        var data=JSON.parse(localStorage.getItem("item"))
+        // if (i>0 && i<data.length) {
+        //     var bb=data.splice(i,1)[0]
+        //     data.splice(i+1,0,bb)
+        // }
+        if (i+1==data.length) {
+            alert("don,t go Down")
+        }
+        var bb=(i>0 && i<data.length) && data.splice(i,1)[0]//......................
+        data.splice(i+1,0,bb)
+        localStorage.setItem("item" , JSON.stringify(data))
+        creatli()
+    }
+    function Del(i) {
+        var data=JSON.parse(localStorage.getItem("item"))
+
+        if (i==0) {
+            var bb=(i>0 && i<data.length) && data.splice(1,2)//......................
+        }
+        else{
+            var bb=(i>0 && i<data.length) && data.splice(i,1)
+        }
+        localStorage.setItem("item",JSON.stringify(data))
+        creatli()
+    }
+    var ff;
+    function Edit(i) {
+        var data = JSON.parse(localStorage.getItem("item"))
+        inp.value = data[i].inp
+        inp1.value = data[i].inp1
+
+        ff=i
+        localStorage.setItem("item" , JSON.stringify(data))
+        but.classList.add("ca")
+        c.classList.remove("ca")
+        creatli()
+    }
+    c.addEventListener("click",()=>{
+        var data = JSON.parse(localStorage.getItem("item"))
+        data[ff].inp=inp.value
+        data[ff].inp1=inp1.value
+
+        inp.value=""
+        localStorage.setItem("item" , JSON.stringify(data))
+        but.classList.remove("ca")
+        c.classList.add("ca")
+        creatli()
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+//         but.addEventListener("click",()=>{
+//         var data=localStorage.getItem("item") ? JSON.parse(localStorage.getItem("item")) : []
+//         data.push(inp.value)
+//         localStorage.setItem("item", JSON.stringify(data))   
+//         inp.value=""    
+//             console.log(inp,but,ul);
+//             snow()
+//    })
+//    function snow() {
+//        ul.innerHTML=""
+//        var data =JSON.parse(localStorage.getItem("item"))
+//        localStorage.setItem("item",JSON.stringify(data))
+//        data.forEach((el,index )=> {
+//            var li=document.createElement("li")
+//            li.innerHTML=`${el} == <button  onclick="handup(${index})">up</button>  <button>Delite</button>  <button>Edit</button>  <button>Down</button> `
+//            ul.appendChild(li)
+//        });
+//    }
+//    function handup(i) {
+//     var data=JSON.parse(localStorage.getItem("item"))
+//     var temp = (i>=0 && i<data.length) && data.splice(i,1)[0];
+//     temp&&data.splice(i-1,0,temp);
+//     localStorage.setItem("item",JSON.stringify(data))
+//     snow();
+    
+//    }
+
+
+    </script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="First">
+    <input type="text" name="scending">
+    <button>Add</button>
+    <ul></ul>
+
+
+    <script>
+        var inp = document.querySelectorAll("input")
+        var but = document.querySelector("button")
+        var ul = document.querySelector("ul")
+
+        but.addEventListener("click", () => {
+            // console.log(inp,but);
+
+
+
+            var data = JSON.parse(localStorage.getItem("item"))
+            var arr = [];
+            // let obj = {}
+            inp.forEach((ele) => {
+
+                arr.push(ele.value)
+                // obj[name] = ele.value
+                ele.value = ""
+            })
+            // console.log(arr);
+            // console.log(obj);
+            // data.push[obj]
+            data += arr
+            console.log(data ,"test data");
+            localStorage.setItem("item", JSON.stringify(data))
+            // show()
+        })
+        function show() {
+            var data=JSON.parse(localStorage.getItem("item"))
+            data.map((ele,index) =>{
+                var div=document.createElement("div")
+                div.innerHTML=`${index} == ${ele} <button>Up</button>  <button>Edit</button>  <button>Del</button>  <button>Down</button>`
+                ul.appendChild(div)
+            })
+            localStorage.setItem("item" , JSON.stringify(data))
+
+        }
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+
+<!-- ...................sir wala........................................ -->
+
+// var data=JSON.parse(localStorage.getItem('items'))
+// if(data){
+    //     // data.push(obj)
+    //     // localStorage.setItem('items', JSON.stringify(data))
+    //     localStorage.setItem("items",JSON.parse([...data,obj]))
+    // }
+    // else{
+    //     localStorage.setItem("items",JSON.parse([obj]))
+            // }
+
+
+
+<!-- .................................Usman with object..................................... -->
+
+
+var inp1 = document.getElementById('inp1')
+            var inp2 = document.getElementById('inp2')
+
+
+            var obj = {
+                inp1 : inp1.value,
+                inp2 : inp2.value,
+           
+            };
+
+
+var data = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
+            data.push(obj)
+                
+                console.log(data, "test");
+                localStorage.setItem('items', JSON.stringify(data))
+                inp1.value = ''
+                inp2.value = 
+
+
+
+               
+<!-- ..........................................  Usman wala whole code................................ -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-color: aliceblue;
+        }
+
+        .main {
+            width: 50%;
+            margin: 100px 20%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" name="first" id="inp1" placeholder="Enter">
+        <input type="text" name="last" id="inp2" placeholder="Enter the name">
+       
+        <input type="text" name="city" id="inp1" placeholder="Enter">
+        <input type="text" name="cntry" id="inp2" placeholder="Enter the name">
+         
+        <button>add</button>
+        <button class="hide" onclick="handleupdate()" id="update">Update</button>
+        <ul></ul>
+
+
+        <script>
+
+
+
+            //    var a=10;
+            //    var b=20;
+            //    var temp=b;
+            //    b=a;
+            //    a=temp
+            //    console.log(a , b ,"test");
+
+
+
+            var inp1 = document.getElementById('inp1')
+            var inp2 = document.getElementById('inp2')
+            var btn = document.querySelector('button')
+            var ul = document.querySelector('ul')
+            let inps=document.querySelectorAll("input")
+
+            console.log(inp1,inp2, btn,inps, "test");
+            btn.addEventListener('click', () => {
+                if (inp1.value == "" && inp2.value == "") {
+                    alert('plz fill all input')
+                    return;
+                }
+                // console.log(inp.value, "input value here");
+                // let arr=[]
+                //   let obj1={}
+                // inps.forEach((ele)=>
+                // {
+                //     // arr.push(ele.value)
+                //     obj1[ele.name]=ele.value
+                // }
+                // )
+
+                // console.log(obj1,"test arr");
+              
+                var obj = {
+                    inp1 : inp1.value,
+                    inp2 : inp2.value,
+               
+            };
+
+            // var data=JSON.parse(localStorage.getItem('items'))
+            // if(data){
+            //     // data.push(obj)
+            //     // localStorage.setItem('items', JSON.stringify(data))
+            //     localStorage.setItem("items",JSON.parse([...data,obj]))
+            // }
+            // else{
+            //     localStorage.setItem("items",JSON.parse([obj]))
+            // }
+            var data = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
+            data.push(obj)
+                
+                console.log(data, "test");
+                localStorage.setItem('items', JSON.stringify(data))
+                inp1.value = ''
+                inp2.value = ''
+                showValue()
+            })
+            showValue()
+
+            function showValue() {
+                ul.innerHTML = ''
+                var data = JSON.parse(localStorage.getItem('items'))
+                if (data == null) {
+                    // alert('no entry')
+                    // return;
+                }
+                else {
+                    data.map((ele, index) => {
+                        // console.log(ele, "test");
+                        var li = document.createElement('li')
+                        li.innerHTML = `${index} = ${ele.inp1} =${ele.inp2}= <button onclick='handledel(${index})'>Del</button> <button onclick='handleedit(${index})'>Edit</button> 
+                     <button onclick='handleShiftUp(${index})'>ShiftUp</button> <button onclick='handleShiftDown(${index})'>ShiftDown</button>`
+                        ul.appendChild(li)
+                    })
+                }
+
+            }
+            function handledel(i) {
+                console.log(i, "test here the index")
+                var data = JSON.parse(localStorage.getItem('items'))
+                data.splice(i, 1)
+                console.log(data, "test here code ");
+                localStorage.setItem('items', JSON.stringify(data))
+                showValue()
+            }
+
+
+            function handleShiftUp(i) {
+                var data = JSON.parse(localStorage.getItem('items'));
+                var temp = (i > 0 && i < data.length) && data.splice(i, 1)[0];
+                temp && data.splice(i - 1, 0, temp);
+                localStorage.setItem('items', JSON.stringify(data));
+                showValue();
+            }
+
+           
+            function handleShiftDown(i) {
+                var data = JSON.parse(localStorage.getItem('items'));
+                var temp = (i >= 0 && i < data.length) && data.splice(i, 1)[0];
+                temp && data.splice(i + 1, 0, temp);
+                localStorage.setItem('items', JSON.stringify(data));
+                showValue();
+            }
+
+            
+
+            var myindex
+            var updatebtn = document.querySelector('#update')
+
+            function handleedit(i) {
+                var data = JSON.parse(localStorage.getItem('items'));
+                console.log(i, 'test here');
+                inp1.value = data[i].inp1
+                inp2.value = data[i].inp2
+                myindex = i
+
+
+                updatebtn.classList.remove('hide')
+                btn.classList.add('hide')
+            }
+            function handleupdate() {
+                var data = JSON.parse(localStorage.getItem('items'));
+                data[myindex] . inp1 =inp1.value
+                data[myindex] . inp2 = inp2.value
+                console.log(myindex, "button");
+                localStorage.setItem('items', JSON.stringify(data));
+                showValue();
+                updatebtn.classList.add('hide')
+                btn.classList.remove('hide')
+                inp1.value = ''
+                inp2.value = ''
+
+            }
+
+
+
+
+
+
+        </script>
+
+</body>
+
+</html> -->

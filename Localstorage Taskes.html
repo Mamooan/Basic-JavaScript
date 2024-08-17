@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .a {
+            width: 30%;
+            min-height: 100vh;
+            height: auto;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1px auto;
+
+        }
+
+        .a>h1 {
+            font-size: 25px;
+        }
+
+        .a1 {
+            width: 100%;
+            height: 15vh;
+            /* border: 1px solid black; */
+        }
+
+        .a4 {
+            width: 100%;
+            height: 17vh;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5px;
+        }
+
+        .a1>h5 {
+            font-size: 19px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .a1>h2 {
+            font-size: 40px;
+            margin-left: 10px;
+        }
+
+        .a2 {
+            height: 100%;
+            width: 49%;
+            background-color: rgba(250, 235, 215, 0.68);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .a2>h6 {
+            font-size: 17px;
+        }
+
+        .a2>h3 {
+            font-size: 22px;
+        }
+
+        .a3 {
+            /* border: 0.5px solid black; */
+            height: 80%;
+        }
+
+        .a5 {
+            height: 5vh;
+            width: 100%;
+            border: 0.5px solid black;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+        }
+        .a6{
+            height: 7vh;
+            width: 100%;
+            background-color: rgba(136, 71, 196, 0.822);
+            border: none;
+            color: aliceblue;
+            margin-top: 30px;
+            font-size: 17px;
+        }
+        .a7{
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid black;
+            margin-top: 5px;
+            position: relative;
+        }
+        .totalincome{
+            color: green;
+        }
+        .totalexpense{
+            color: red;
+        }
+        .b3{
+            width: 15px;
+            height: 65%;
+            background-color: red;
+            color: white;
+            position: absolute;
+            left: -9.5%;
+            top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <h1>Expense Tracker</h1>
+        <div class="a1">
+            <h5>YOUR BALANCE</h5>
+            <h2 class="totalbalance">$0.00</h2>
+        </div>
+        <div class="a4">
+            <div class="a2">
+                <h6>Income</h6>
+                <h3 class="totalincome">$0.00</h3>
+            </div>
+            <hr class="a3">
+            <div class="a2">
+                <h6>Expense</h6>
+                <h3 class="totalexpense">$0.00</h3>
+            </div>
+        </div>
+        <div style="width: 100%; height: auto; min-height: 50vh;">
+            <h3 style="margin-top: 30px; margin-left: 10px;margin-bottom: 10px;">History</h3>
+            <hr>
+            <ul></ul>
+            <h3 style="margin-top: 30px; margin-left: 10px; margin-bottom: 10px;">Add new transaction</h3>
+            <hr>
+            <form action="">
+                <label for="" style="font-size: 17px;font-weight: 400; margin: 10px;">Taxt</label>
+                <br>
+                <input type="text" class="a5" id="b1">
+                <br>
+                <label for="" style="font-size: 17px;font-weight: 400;margin: 10px;">Amount</label>
+                <br>
+                <input type="number" class="a5" id="b">
+            </form>
+        </div>
+        <button class="a6">Add transaction</button>
+    </div>
+    <script>
+        var inp1=document.getElementById("b1")
+        var inp=document.getElementById("b")
+        var totalincome=document.querySelector(".totalincome")
+        var totalexpense=document.querySelector(".totalexpense")
+        var totalbalance=document.querySelector(".totalbalance")
+        var but=document.querySelector("button")
+        var ul=document.querySelector("ul")
+
+        but.addEventListener("click" , ()=>{
+            var data=localStorage.getItem("item") ? JSON.parse(localStorage.getItem("item")) : []
+            var obj={
+                inp1:inp1.value,
+                inp:inp.value
+            }
+            data.push(obj)
+            localStorage.setItem("item" , JSON.stringify(data))
+            inp.value='';
+            inp1.value='';
+            show()
+        })
+        function show() {
+            var data=JSON.parse(localStorage.getItem("item")) 
+            var expenseStore=0;
+            var incomeStore=0;
+
+             data.forEach(ele => {
+                if (ele.inp>=0) {
+                    totalincome.innerText=""
+                    incomeStore=incomeStore + Number(ele.inp)
+                    totalincome.innerText=incomeStore
+                }
+                else{
+                    totalexpense.innerText=""
+                    expenseStore=expenseStore - Number(ele.inp)
+                    totalexpense.innerText=expenseStore
+                }
+                // console.log(Yb ,"here fghjkjhgfdggh");
+            });
+            if (totalincome.value>totalexpense.value) {
+                var Yb=expenseStore - incomeStore
+                totalbalance.innerHTML=Yb
+                totalbalance.style.color="green"
+            }
+            // console.log(totalexpense ,"test here");
+            else{
+                var Yb=incomeStore - expenseStore
+                totalbalance.innerHTML=Yb
+                totalbalance.style.color="red"
+            }
+            ul.innerHTML=""
+            data.map((ele,index)=>{
+            ul.innerHTML+=`<div class="a7"> <button class="b3" onclick="del(${index})">X</button><h4>${ele.inp1}</h4> <h4>${ele.inp}</h4></div>`
+            localStorage.setItem("item" , JSON.stringify(data))
+            })
+          
+        }
+        function del(i) {
+// console.log(i);
+            var data=JSON.parse(localStorage.getItem("item"))
+            data.splice(i,1)[0]
+            localStorage.setItem("item" , JSON.stringify(data))
+            show()
+        }
+
+    </script>
+</body>
+
+</html>

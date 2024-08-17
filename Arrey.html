@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <h1></h1>
+    <script>
+
+        
+        var a=[1,2,5,6,"ali","","12",[2,6,54,75],5,7];
+        var b=a[3]
+        var h1 =document.querySelector('h1')
+        h1.innerText=`${b}`;
+        h1.style.backgroundColor="red"
+        console.log(b);
+
+        // console.log(a);
+        // console.log(a.length);
+        // console.log(a[7]);
+        // console.log(a[7][2]);
+        // console.log(a[3]);
+        // console.log(typeof[a])
+
+        // for (i = 0; i <= a.length-1; i++) {
+        //     console.log(a[i])
+        // }
+
+
+
+
+
+        // var a=[1,2,5,6,"ali","","12",[2,6,54,75],5,7];
+        // console.log(a)
+        // console.log(a.push(12))
+        // console.log(a.pop());
+        // a[6]=20;
+        // a[9]="faiq";
+        // a[2]="ahmad";
+        // a.shift()
+        // a.unshift(20)
+        // console.log(a.length);
+        // console.log(a.reverse());
+        // a.reverse();
+        // console.log(a.slice(2,3));
+        // console.log(a.splice(2,5));
+        // console.log(a);
+        // a.forEach(ele => {
+        //     if (ele%2==0) {
+        //      console.log(ele);
+        //     }
+
+        // });
+
+
+
+        // 1.	Write a Program that Takes the 10 Values from the user and Store in the array.
+
+        // var a = [+prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt(), +prompt(),];
+        // console.log(a)
+
+        // var a=[];
+        // for (i = 0; i < 10; i++) {
+        //     a[i] =+prompt("Enter the number");
+        //     console.log(a[i]);
+        //     console.log(a);
+        // }
+        // console.log(a)
+
+
+
+
+        // var a=[a];
+        // i=0
+        // a.forEach(ele => {
+        //     a[ele] =+prompt("Enter the number")
+        //     i++
+        // });
+
+
+
+
+
+
+
+
+
+
+
+        // 2 Write a Program that Takes the Array from the user and prints the Maximum Value from that array.
+
+
+        // var a = [+prompt(), +prompt()];
+        // if (a[0] > a[1]) {
+        //     console.log(a[0]);
+        // }
+        // else {
+        //     console.log(a[1]);
+        // }
+
+
+
+        // var a=[]
+        // for (i = 0; i < 10; i++) {
+        //     a[i] = + prompt("Enter the number");  
+        // }
+        // var z=a[0]
+        // a.forEach((work)=>{
+        //     if (z<work) {
+        //         z=work
+        //     }
+        // })
+        // console.log(z);
+
+
+
+
+
+        // var a=[]
+        // for(i=0; i<10; i++){
+        //     a[i]=prompt('Enter the Number')
+        // }
+        // var number=a[0]
+        // a.forEach((ele)=>{
+        //     if(number>ele){
+        //         number=ele
+        //     }
+        // })
+        // console.log(number)
+
+
+
+
+
+        // 3.	Write a Program that prints the Total Sum of the Even Number from the Array.
+
+        //         var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //         var sum=0;
+        //         var w=0;
+        //         var z = a.filter((ele) => {
+        //             if (ele % 2 == 0) {
+        //                 console.log(ele,"Even number");
+        //                 sum=sum+ele
+        //             }
+        //             else {
+        //                 // console.log(ele,"Odd number");
+        //                 w=w+ele;
+        //                 return ele;
+        //             }
+        //         })
+        //    console.log(sum,"this is sum of even",w,"This is sum of odd",z,"This is odd number")
+
+
+
+
+        // 4.	Create a function that takes an array of numbers and returns a new array with only the prime numbers.
+
+        // function ap() {
+        //     var a = [+prompt()];
+        //     var prime = 0
+        //     a.filter((ele) => {
+        //         if (ele % 2 == 0) {
+        //             prime = 1
+        //             // return prime
+        //         }
+
+        //     })
+        //     if (prime == 1) {
+        //         console.log("not prime")
+        //     }
+        //     else {
+        //         console.log("prime")
+
+        //     }
+        // }
+        // ap();
+
+
+        // function a() {
+        //   var b=[1,31,42,52,63,2,3,765,8,57];
+        //   var z=b.filter((work)=>{
+        //     prime=0;
+        //     for (i = 2; i < work; i++) {
+        //     if (work%i==0) {
+        //         prime=1
+        //     }   
+        //     }
+        //     if (prime==0) {
+        //         return work;
+        //     }
+        //     else{
+        //         // return work;
+        //     }
+
+        //   })  
+        //   console.log(z)
+        // }
+
+        // a()
+
+
+
+        // 5.	Make and array and perfume all the Methods.
+        // Push, Pop, Shift, unshift
+
+
+
+        // var a=[1,23,45,"ali",[1,3,4,],"",7];
+        // console.log(a);
+        // console.log(a.push(20));
+        // console.log(a.pop());
+        // console.log(a.shift());
+        // console.log(a.unshift(20));
+        // console.log(a)
+
+
+
+
+        // 1.	Write a Program that Takes the 10 Values from the user and Store in the array.
+        // 2.	Write a Program that Takes the Array from the user and prints the Maximum Value from that array.
+        // 3.	Write a Program that prints the Total Sum of the Even Number from the Array.
+        // 4.	Create a function that takes an array of numbers and returns a new array with only the prime numbers.
+        // 5.	Make and array and perfume all the Methods.
+        // Push, Pop, Shift, unshift
+
+
+
+
+
+
+        // ................................part # 2..........................
+
+
+
+        //   Q#1  Create an array of numbers [1, 2, 3, 4, 5]. Use a forEach loop to calculate
+        //      the sum of all the numbers in the array and store the result in a variable.
+
+
+
+
+        //     var a=[1,3,3,5,6,7,8,8,8,]
+        //     sum=0;
+        //     a.forEach(element => {  
+        //      sum = sum+element
+        //     });
+        //     console.log(sum);
+
+
+
+
+        //  Q#2 Write a forEach loop that logs each element of the array ['apple',
+        //  'banana', 'orange'] to the console.
+
+
+
+        // var a=['apple','banana','orange']
+        //      a.forEach(element => {
+        //         console.log(element)
+        // });
+
+
+
+
+
+
+        //  Q#3  Given an array of objects [{ name: 'John', age: 25 }, { name: 'Sarah', age: 30 }, { name:
+        //     'Michael', age: 35 }], use a forEach loop to log the name and age of each object in the array to the console.
+
+
+
+        // var a=["age 21 Name Ahmad","age 22 Name Jawad","age 23 Name Usman" ]
+
+        //     a.forEach(ele => {
+        //         console.log(ele);
+        //     });
+
+
+
+
+
+        //  Q#4 Convert the array [1, 2, 3, 4, 5] into a new array where each element
+        //  is multiplied by 2 using a forEach loop.
+
+
+
+
+        // var a=[1,2,3,4,5]
+
+        //     a.forEach(ele => {
+
+        //         console.log(ele*2);
+
+        //     });
+
+
+
+
+        // Q#5 Write a forEach loop that finds and logs the index of the first occurrence of the
+        //  number 10 in the array [5, 10, 15, 20, 25, 10, 35].
+
+
+
+        // var a=[5,10,15,20,25,10,35];
+        // var my =0;
+        // a.map((ele,i)=> {
+        //     if (ele==10 && my==0) {
+        //         console.log(ele,i,'Find the 10');
+        //         my=i
+        //     }
+        // });
+
+
+
+
+
+        // Q#6 Given an array of integers, find the sum of all the elements
+
+
+        // var a=[]
+        //     sum=0
+        //     for(i=0;i<10;i++){
+        //         a[i]=+prompt('enter the number')
+        //     }
+        //     a.forEach(element => {
+        //         sum=sum+element
+
+        //     });
+        //     console.log(sum);
+
+
+
+
+
+        //Q#7 Given an array of strings, map each string to its uppercase version
+
+
+
+        // var a=["uppercase",'apple','class',"business" ]
+        // a.map((ele)=>{
+        //     console.log(ele.toUpperCase());
+        // })
+
+
+
+    //     var a=["uppercase",'apple','class',"business" ]
+    //  var i=0
+    //      e  =  a[i].toUpperCase()
+    //      console.log(e);
+    //  var i=1
+    //  e  =  a[i].toUpperCase()
+    //      console.log(e);
+    //  var i=2
+    //  e  =  a[i].toUpperCase()
+    //      console.log(e);
+    //  var i=3
+    //  e  =  a[i].toUpperCase()
+    //      console.log(e);
+
+     
+
+
+
+        //  Q#8 Given an array of numbers, map each number to its square
+
+        //  var a=[1,2,3,4,5,6,7,8,9,10];
+        //  a.map((ele)=>{
+        //     console.log(ele*ele);
+        //  })
+
+
+
+
+
+        //  Q#9 Given an array of numbers, filter out all numbers that are Even and show them
+
+
+
+
+        // var a=[1,2,3,4,5,6,7,8,9,10]
+        //       a.filter((ele,i,a) => {
+        //         if(ele%2==0){
+        //             console.log(ele);
+        //         }
+
+        //       });
+        //      console.log(a);
+
+
+
+
+
+        //  Q#10 Given an array of numbers, find the maximum value in the array
+
+
+
+        // var a=[1,22,34,3,6,74,,5,1,6,1,55];
+        // var mex=0;
+        // a.forEach(ele => {
+        //     if (ele>mex) {
+        //         mex=ele
+        //     }
+        // });
+        // console.log(mex,"Maximum value")
+
+
+        // var a=[1,22,34,3,6,74,,5,1,6,1,55];
+        // var m_a = Math.max(...a);
+        // var n_a = Math.min(...a);
+        // console.log(m_a,n_a);
+
+
+        // Q#11 Reverse the order of elements in an array.
+
+
+
+
+        // var a=[1,2,3,4,5,,6,77,'usman',5]
+        //     a.reverse()
+        //     console.log(a);
+
+
+
+
+
+        // Q#12 Write a program to find the largest and smallest elements in an array.
+
+
+
+        // var a = [1, -22, 34, 3, 6, 74, 5, 120, 6, 1, 55];
+        // var mex = 0;
+        // var sm = 0;
+        // a.forEach(ele => {
+        //     if (ele > mex) {
+        //         mex = ele
+        //     }
+        //     if (sm > ele) {
+        //         sm = ele
+        //     }
+        // });
+        // console.log(mex, "largest value", sm, 'Smallest value')
+        // console.log(a);
+
+
+
+
+        // var number = [0,-22, 3, 5, 6, 7, 10, 33];
+        // var smallest_number = Math.min(...number);
+        // var largest_number = Math.max(...number);
+        // console.log(smallest_number);
+        // console.log(largest_number);
+
+
+
+
+
+        // var a=[1,2,4,54,68,32,25,16,1]
+        // var b=Math.max(...a);
+        // var c=Math.min(...a);
+        // console.log(b,"Mix Number",c,"min Number");
+
+
+
+        // Q#13 Write a program to check if an array is sorted in ascending order.
+
+        // var a=[1,2,4,54,68,32,25,16,1]
+        // a.sort((a,b)=>
+        //     a - b 
+        //     )
+        //     console.log(a)
+
+        //     const numbers = [5, 2, 8, 1, 9, 4];
+        // numbers.sort((a , b) =>
+        //     a % 2 - b % 2 || a - b
+        // )
+        // console.log("Rearranged Array:", numbers);
+
+
+            // sort()
+
+
+
+        // Q#14 Find the average of all the elements in an array of floating - point numbers.
+        // Q#15 Remove duplicate elements from an array.
+
+        
+//         let array = [1,2,3,2,25,2,5,6,1];
+//         let uniqueArray = [...new Set(array)];
+
+//         console.log(uniqueArray); // Output: [1, 2, 3, 25, 5, 6]
+
+
+
+        // Q#16 Find the second smallest element in an array of integers.
+        // Q#17 Count the number of occurrences of a specific element in an array.
+        // Q#18 Rotate the elements of an array to the right by a given number of positions.
+        // Q#19 Given two arrays of integers, find the intersection of the two arrays (common elements).
+        // Q#20 Given an array of integers, rearrange the elements in such a way that all the even numbers appear before the odd numbers.
+        // Q#21 Given an array of integers, determine if there exists a pair of elements that sum up to a given target value.
+        // Q#22 Sort an array of integers in descending order.
+
+
+
+        // var a=[1,3,5,2,9,5,11];
+        // var z=0;
+        // a.forEach(ele => {
+        //     if (ele>z && ele>z) {
+        //         z=ele
+        //         console.log(z);
+        //     }
+        // });
+
+
+
+        // Q#23 Remove all occurrences of a specific element from an array.
+        // Q#24 Given an array of integers, find the index of the first occurrence of a specific element.
+        // var a = [1, 2, 3, 4, 2, 6, 7, 2];
+        // var myindex = 0
+        // a.filter((ele, index) => {
+        //     if (ele == 2 && myindex == 0) {
+        //         console.log(index);
+        //         myindex = ele
+        //     }
+        // })
+        // console.log(myindex,"test");
+
+
+// ..........all dubel element................
+
+        // var a = [1, 2, 3, 4, 2, 6, 7, 2];
+        // var my = 0;
+        // a.filter((ele,index) => {
+        //     if (ele==2 && my==0) {
+        //         console.log(index);
+        //     }
+        // });
+
+
+
+// ..........First dubel element................
+
+
+// var a = [1, 2, 3, 4, 2, 6, 7, 2];
+// var my = 0;
+// a.filter((ele,index) => {
+//     if (ele==2 && my==0) {
+//         console.log(index);
+//         my=index
+//     }
+// });
+
+// ..........Last dubel element................
+
+
+
+// var a = [1, 2, 3, 4, 2, 6, 7, 2];
+// var z=a.map((ele,index) => {
+//     if (ele==2) {
+//         return index    
+//     }
+//     console.log(z);
+// });
+// console.log(z);
+
+
+
+
+        // Q#25 Merge two sorted arrays into a single sorted array.
+
+
+
+      // var a=[1,2,3,4,5,6,7,8];
+        // var q=[0,3030,45,53,9];
+        // console.log(a.concat(q));
+
+
+
+
+        // var a=[1,2,3,4,5,6,7,8];
+        // var b=[];
+        // var c=[];
+        // a.filter((ele,index) => {
+        //     if (ele%2==0) {
+        //         b[0]=a[ele]
+        //         console.log(b,index);
+        //     }
+        //     else{
+        //         c[0]=a[ele]
+        //         console.log(c,index);
+        //     }
+        //     // console.log(b);
+        //     // console.log(c);
+        // });
+
+
+
+
+        // var a=[1,2,3,4,5,6,7,8];
+        // var c=[];
+        // var b=a.filter((ele,index) => {
+        //     if (ele%2==0) {
+        //         b=a[ele]
+        //         return b
+        //     }
+        // });
+        //     console.log(b);
+        // var c=a.filter((ele,index) => {
+        //     if (ele%2==1) {
+        //         c=a[ele]
+        //         return c
+        //     }
+        // });
+        //     console.log(c);
+
+
+
+
+
+        // var a=[1,2,3,4,5,6,7,8];
+        // var b=a.map((ele,index) => {
+        //         return ele %2 ==0
+        // });
+        //     console.log(b);
+        // var c=a.map((ele,index) => {
+        //         return ele %2==1
+        // });
+        //     console.log(ele);
+
+
+  
+
+        // Q#26 Find the median of an array of integers (the middle element if the array size is odd, or the average of the two middle elements if the size is even).
+
+//Q 26 Merge two sorted arrays into a single sorted array
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//         var arr2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+//         console.log(arr.concat(arr2));
+
+
+
+
+        // Q#27 Given an array of integers, replace each element with the product of all the other elements (excluding itself).
+
+
+
+
+        // ................................Mazil........................
+
+
+// Q 16 Remove duplicate elements from an array.
+
+        // const originalArray = [1, 2, 2, 3, 4, 4, 5];
+        // const uniqueArray = [...new Set(originalArray)];
+        // console.log(uniqueArray);
+
+
+
+        // Q 20 Given two arrays of integers, find the intersection of the two arrays (common elements).
+
+        // const arr1 = [1, 2, 3, 4, 5];
+        // const arr2 = [3, 4, 5, 6, 7];
+        // const intersection = arr1.filter((ele) =>
+        //     arr2.includes(ele)
+        // )
+        // console.log("Intersection:", intersection);
+
+
+
+
+
+
+
+// Q 23 Given an array of integers, rearrange the elements in such a way that all the even numbers appear before the odd numbers.
+
+        // const numbers = [5, 2, 8, 1, 9, 4];
+        // numbers.sort((a , b) =>
+        //     a % 2 - b % 2 || a - b
+        // )
+        // console.log("Rearranged Array:", numbers);
+
+
+
+        // Q 24 Remove all occurrences of a specific element from an array.
+
+        // const arr = [1, 2, 3, 2, 4, 5, 2];
+        // const arr_remove = 2;
+        // const z = arr.filter(element =>
+        //     element !== arr_remove
+        // )
+        // console.log("Original Array:", arr);
+        // console.log("Array with removed:", z);
+
+// .....................................Mazil............................
+
+        // ...................sir wala.....................
+
+
+        // push  inser value at last of array
+        // pop delete value from the last of array
+
+        // shift    delet value from the start of array
+        // unshift insert value at the start of aarray
+
+        // arrayname.length    to  check the array length
+        // arrayname.reverse()    to reverse the array
+
+        // a.slice(2,6)      use to make the slice of actual array without affect orgnl array
+        // a.splice
+
+        //    forEach /////////// just alternate of for Loop
+        // filter ///////////////////    retreive + return
+        // map //////////////// retreive + return + change value
+
+
+
+
+        // var a=[1,'1','a',[1,2,3,4],'2',4,10,12,25]
+        // var z=a.filter((ele ,index)=>{
+        // if(ele%2==0)
+        // {
+        //     return ele
+        // }
+        // console.log(index)
+        // })
+        // console.log(z,"test");
+
+        // a.forEach((ele)=>{
+        // console.log(ele);
+        // })
+
+        // console.log(a,"test");
+
+
+
+
+
+
+        // var arr = [2, 3, 4, 6, 7, 8, 9, 0, 12]
+        // var sum = 0;
+        // for (i = 0; i < arr.length; i++) {
+        //     console.log(arr[i], "for loop");
+
+        // }
+        // console.log(sum, "all even sum")
+        // arr.filter((ele) => {
+        //     console.log(ele);
+        //     if (ele % 2 == 0) {
+        //         sum = sum + ele
+        //     }
+        // })
+        // console.log(sum, "test here foreach");
+
+
+
+
+
+        // Takes the Array from the user and prints the Maximum Value
+        // var arr = [2, 24, 110, 56, 12, 99, 10, 9, 20, 1, 3]
+        // for (i = 0; i < 10; i++) {
+        //     arr[i] = prompt('enter the value')
+        // }
+        // var max = arr[0]
+        // arr.forEach((ele) => {
+        //     if (max < ele) {
+        //         max = ele
+        //     }
+        // })
+        // console.log(max, "its maximum ")
+
+
+
+
+        // prime Number
+
+        // var arr=[2,24,110,56,12,99,10,9,20,1,3]
+        // var z=arr.filter((work)=>{
+        //     var prime=0;
+        // for(i=2;i<work;i++)
+        // {
+        //     if(work%i==0)
+        //     {
+        //         prime=1;
+        //     }
+        // }
+        // if(prime==0)
+        // {
+        //     return work
+        // }
+        // else{
+        //     // return work
+        // }
+        // })
+        // console.log(z ,"test")
+
+
+
+
+
+        // var a = [1, 2, 3, 4, 6, 7, 8, 9, 0]
+        // var x = a.map((ele) => {
+        //     if (ele % 2 == 0) {
+        //         return ele * 2
+        //     }
+        //     else {
+        //         return ele + 3
+        //     }
+        //     // return ele
+        // })
+        // console.log(a);
+        // console.log(x);
+
+
+
+
+
+
+        // var a = [1, 2, 3, 4, 6, 7, 8, 9, 0]1235
+        // console.log(a.slice(1, 5));
+        // console.log(a);
+
+
+
+
+        // var arr=[1,2,3,4,5,6,7]
+        // var z=arr.filter((ele ,index ,array)=>{
+        // if(ele%2==1)
+        // {
+        //     console.log(ele);
+        // }
+        // else{
+        //     return ele
+        // }
+
+        // })
+        // console.log(z ,"test");
+        // document.write(arr+'<br>')
+
+
+
+
+        // var a = [1, 2, 3, 4, 6, 7, 8, 9, 0]
+        // var x = a.map((ele) => {
+        //     if (ele % 2 == 0) {
+        //         return ele * 2
+        //     }
+        //     else {
+        //         return ele + 3
+        //     }
+        //     // return ele % 2 == 0
+        //     // return ele * 2
+
+        // })
+        // console.log(a);
+        // console.log(x);
+
+
+
+
+
+//         var arr=[1,2,3,4,5,12,7,89,0,12]
+// var myindex=0;
+//  arr.forEach((ele,index)=>{
+
+//     if(ele==12 && myindex==0)
+//     {
+//         myindex=index
+//     }
+//  })
+//  console.log(myindex)
+
+// var x=arr.map((ele)=>{
+//     if(ele==12 || ele==5)
+//     {
+//    return ele/2
+//     }
+//     else{
+//         return ele
+//     }
+//    if(ele%2==0)
+//    {
+//     return ele*2
+//    }
+//    else{
+//     return ele*5
+//    }
+
+// })
+// console.log(arr,"array");
+// console.log(x,"test");
+
+// const myArr = [1,[2,3,4],['ali'],[3,5,6,7,8]];
+
+// const newArr = myArr.flat();
+// console.log(newArr);
+
+
+
+
+// var arrb=[5,6,7,8,9,0]
+// var t=arr.concat(arrb);
+// console.log(t ,"test");
+// var z=arr.join('*')
+// console.log(z);
+
+
+
+        // .............sie wala end...................
+
+
+
+    </script>
+</body>
+
+</html>

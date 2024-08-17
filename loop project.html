@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// ..............1-Write a Program That Make the Table of User Given
+// .............. Number up to user end length (For Loop)
+
+
+// var a=+prompt("Enter the munber that you Make Table");
+// var w=+prompt('Enter the number that you end it');
+// for (var index = 1; index <= w; index++) {
+//     console.log(`${a} x ${index} = ${a*index}`);
+    
+// }
+
+
+
+
+// ..............2-Write a Program that Print the Fibonacci Series  
+// ........: 0 1 1 2 3 5 8 13 21 34 ..........         any loop
+
+
+// i=0;
+// s=1;
+// do {
+//     console.log(i);
+//     k=i+s
+//     s=i
+//     i=k
+// } while (i<=100);
+
+
+// 0 1 1 2 3 5 8 13 21 34 .........
+
+    // var start=0;
+    // var end=1;
+    // for(var i=0;i<=5;i++)
+    // {
+    //     console.log(start);
+    //     var temp=start+end;
+    //     start=end;
+    //     end=temp
+
+    // }
+
+
+
+
+
+// ..............3-Write a Program that Print this Series 
+//      1  5 25 125 625 ........    (for /while)
+
+// var a=5
+// for (index = 1; index < 700;index = index*5) {
+//     console.log(index);
+// }
+
+
+
+// var i=1;
+// while (i < 700) {
+//     console.log(i);
+//     i = i*5
+// }
+
+
+
+
+// function ah() {
+//     i=1;
+//     while (i<750) {
+//         console.log(i)
+//         i=i*5
+//     }
+// }
+
+// ah()
+
+
+
+
+
+
+// 4-Write a program that Find the Sum of This Series          1 + 1/2 + 1/4 + 1/6 +1/8 + 1/10 .......... 1/100   (for / while)
+
+// function q() {
+//     var sum=1
+//   for (index = 0; index <= 100; index = index + 2) {
+//    sum = sum +(1/index);
+//     console.log(index); 
+//   }  
+// }
+
+// q()
+
+
+
+// function q() {
+//     var sum=1
+//   for (index = 2; index <= 100; index = index + 2) {
+//    sum = sum +(1/index);
+//     console.log(sum); 
+//   }  
+// }
+
+// q()
+
+
+
+
+
+
+
+// 5-Write a Program that take the Number from the user till user enter the stop and find the maximum Number from all these number.
+
+
+// function e() {
+
+// i=1
+// while (e!="stop") {
+//         var w=prompt("Enter the number");
+//         var e=prompt("you want to stop this");
+//    if (w.length>8) {
+//     console.log("This is strong number")
+//    } 
+//    else{
+//     console.log("Enter the any number")
+//    }
+//     i++
+// }
+
+// }
+// e()
+
+
+
+        // var max=0;
+        // do{
+        //     var val=prompt('enter the number')
+        //     if(val>max)
+        //     {
+        //         max=val
+        //     }
+        //     var ch=prompt('enter stop for the break')
+        // }while(ch!='stop')
+
+        // console.log(max,"test");
+
+
+
+
+
+
+
+
+// ............6-Write a program to reverse a given number using a while loop
+
+// for (index = 100; index >= 0; index--) {
+//     console.log(index);
+    
+// }
+
+
+// var i=0;
+// while (i>= -100) {
+//     console.log(i);
+//     i--
+// }
+
+
+// var a="1234";
+
+// while (a>0) {
+//     r=parseInt(a%10)
+//     r=r+z
+//     console.log(a%10);
+// }
+
+
+
+
+
+
+// ............7-Create a program to check if a given number is prime using a For Loop
+
+
+
+
+// let q=+prompt("Enter the number");
+// var r=0;
+// i=2;
+// while (i<=q) {
+//     if (q%i==0) {
+//         r=0
+//     }
+//     i++
+// }
+// if (r==1) {
+//     console.log('not a prime number');
+// }
+// else{
+//     console.log('a prime number');
+// }
+
+
+
+// var a=+prompt("Enter the number");
+// var r=0;
+
+// for (index = 2; index <= a/2; index++) {
+//     if (a%index==0) {
+//         r==1
+//     }
+    
+// }
+// if (r==1) {
+//     console.log('Not prime number')
+// }
+// else{
+//     console.log('prime number')
+// }
+
+
+
+// function a() {
+//   var w=prompt("Enter the number");
+//   e=0
+//     for (index = 0; index <= w; index++) {
+//         if (w%2==0) {
+//          e=1   
+//         }
+//     }
+//     if (e==1) {
+//         console.log('not prime');
+//     }
+//     else{
+//         console.log('prime');
+//     }
+//        return w
+// }
+
+// var re=a();
+// console.log(re,"Text" );
+
+
+
+// function sum(a) {
+//     if (a%2==0 || a%3==0) {
+//         console.log("not prime");
+        
+//     }
+//     else{
+//         console.log("prime");
+
+//     }
+
+// }
+
+// sum(+prompt("enter the number"));
+
+
+
+
+
+
+// 8-Implement a program to find the GCD of two numbers using a while loop.
+
+// var ah=prompt("Enter the number");
+// var qs=prompt("Enter the number");
+// gcd=0;
+
+// for (let index = 0; index <= ah; index++) {
+//     if (ah%2==0 && qs%2==0) {
+//       gcd=index 
+//     }
+// }
+// console.log(gcd)
+
+
+
+//         var num1=prompt('entre the num 1')
+//         var num2=prompt('entre the num 2')
+// var gcd=1;
+//         for(i=2;i<=num1;i++)
+//         {
+//             if(num1%i==0 && num2%i==0)
+//             {
+//                 gcd=i
+//             }
+//         }
+//         console.log(gcd);
+
+
+
+
+
+
+
+// function ah(params) {
+//     var num1=prompt('entre the num 1');
+//     var num2=prompt('entre the num 2');
+//     gcd=1
+//     for (let index = 0; index <= num1; index++) {
+//         if (num1 % 2==0 && num2 % 2==0) {
+//             gcd=index;
+//         }
+    
+//     }
+//     console.log(gcd);
+// }
+
+
+// ah()
+
+
+
+
+
+
+// .............9-Write a program to find the sum of all even numbers from 1 to N using a For Loop
+
+
+// var a=0;
+// for (let index = 0; index < 100; index = index + 2) {
+//     console.log(index);
+//     a=index + a
+// }
+// console.log(a);
+
+
+
+
+// ..............14-Create a program to calculate the sum of the first
+// ............. 50 positive odd integers using a while loop.
+
+// var a=50;
+// var e=0;
+// var i=1;
+// while (e<=a) {
+//     console.log(i)
+//     i = i+2
+//     e++
+// }
+
+
+
+
+
+// 16-Write a program that prompts the user to enter a positive number and keeps prompting until a valid positive number is provided. do while
+
+
+// function w() {
+//     do {
+//         var a=prompt("Enter the number");
+//         if (a>0) {
+//             console.log("Keep prompting")
+//         }
+//         else{
+//             console.log("not Keep prompting")
+//         }
+//     } while (a>=0);
+// }
+// w()
+
+
+
+// 17-Implement a menu-driven program that offers choices like "Add," "Subtract," "Multiply," and "Quit." Use a do-while loop to keep the program running until the user chooses to quit. do while
+
+
+
+// function we() {
+ 
+//     do {
+
+//    var a=+prompt("Enter the number");
+//     var b=+prompt("Enter the number");
+//     var c=prompt("Enter the operater");
+
+//         switch (c) {
+//     case "+":
+//         alert(a+b);
+//         break;
+
+//         case "-":
+//         alert(a-b);
+//         break;
+
+//         case "*":
+//         alert(a*b);
+//         break;
+//     default:
+//    } 
+// } while(c!="Quit")
+// }
+// we()
+
+   
+
+
+
+// 18-Write a program that prompts the user to enter a password. Continue prompting until the correct password is entered. do while
+
+
+
+// function er() {
+//     do {
+//         var a=prompt("Enter the password");
+//         if (a=="pass") {
+//             alert("correct password");
+//         }
+//         else{
+//             alert("worng password");
+//         }
+//     } while (a!=="pass");
+//     return a
+// }
+// var w=er();
+// console.log(w)
+
+
+
+
+
+// 19-Implement a program that plays the game of "FizzBuzz." For numbers from 1 to 100, print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both 3 and 5.   any Loop
+
+
+
+// function ka() {
+//     do {
+//     var q=+prompt("enter the number");
+//         if (q%3==0 && q%5==0) {
+//             console.log('Fizzbuzz');
+//         }
+//         else if(q%3==0){
+//             console.log('buzz');
+//         }
+//         else{
+//             console.log('Fizz');
+//         }
+//     } while (q>1 && q<100);
+// }
+// ka()
+
+
+
+
+
+
+
+// ..............20-Write a Program that print the Reverse Reverse Table.
+
+
+// var w=+prompt("Enter the number");
+
+// i=1;
+
+// do {
+//     console.log(`${w} X ${i} = ${w*i}`);
+//     i--
+// } while (i>=-10);
+
+
+
+
+
+
+
+// 1-Write a Program That Make the Table of User Given Number up to user end length (For Loop)
+// 2-Write a Program that Print the Fibonacci Series     : 0 1 1 2 3 5 8 13 21 34 ..........         any loop
+// 3-Write a Program that Print this Series      1  5 25 125 625 ........    (for /while)
+// 4-Write a program that Find the Sum of This Series          1 + 1/2 + 1/4 + 1/6 +1/8 + 1/10 .......... 1/100   (for / while)
+// 5-Write a Program that take the Number from the user till user enter the stop and find the maximum Number from all these number.
+// 6-Write a program to reverse a given number using a while loop
+// 7-Create a program to check if a given number is prime using a For Loop
+// 8-Implement a program to find the GCD of two numbers using a while loop.
+// 9-Write a program to find the sum of all even numbers from 1 to N using a For Loop
+// 10-Write a program to check if a number is a palindrome using a while loop like 121 , read from both side number is same
+// 11-Implement a program to check if a number is Armstrong using a while loop
+// 12-Create a program to print the square of each number from 1 to N using a for loop
+// 13-Implement a program that rolls a six-sided die until it rolls a 6 using a do while loop
+// 14-Create a program to calculate the sum of the first 50 positive odd integers using a while loop.
+// 15-Create a program to calculate the sum of the squares of the first 25 odd numbers using a for loop
+// 16-Write a program that prompts the user to enter a positive number and keeps prompting until a valid positive number is provided. do while
+// 17-Implement a menu-driven program that offers choices like "Add," "Subtract," "Multiply," and "Quit." Use a do-while loop to keep the program running until the user chooses to quit. do while
+// 18-Write a program that prompts the user to enter a password. Continue prompting until the correct password is entered. do while
+// 19-Implement a program that plays the game of "FizzBuzz." For numbers from 1 to 100, print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both 3 and 5.   any Loop
+// 20-Write a Program that print the Reverse Reverse Table.
+
+
+
+
+
+
+
+
+
+// Write a Program That Make the Table of User Given Number up to user end length (For Loop)
+
+
+        //         var table=prompt('enter the table number')
+        //         var length=prompt('enter the table number')
+        //      for(var i=1 ; i<=length ; i++)
+        //      {
+        // console.log(${table} X ${i} == ${table*i})
+        //      }
+
+        // 0 1 1 2 3 5 8 13 21 34 .........
+
+        // var start=0;
+        // var end=1;
+        // for(var i=0;i<=5;i++)
+        // {
+        //     console.log(start);
+        //     var temp=start+end;
+        //     start=end;
+        //     end=temp
+
+        // }
+
+        // for(i=1;i<720;i=i*5)
+        // {
+        //     console.log(i);
+        // }
+
+        // var i=1
+        //   while(i<720)
+        //   {
+        //     console.log(i);
+        //     i=i*5
+        //   }
+
+
+        // var i=1
+
+        //   do{
+        //     console.log(i);
+        //     i=i*5
+        //   } while(i<720)
+
+        //  1 + 1/2 + 1/4 + 1/6 +1/8 + 1/10 .......... 1/100
+        // var sum=1;
+        // for(i=2;i<=100;i+=2)
+        // {
+        //     sum=sum+(1/i)
+
+        // }
+        // console.log(sum);
+
+        // var max=0;
+        // do{
+        //     var val=prompt('enter the number')
+        //     if(val>max)
+        //     {
+        //         max=val
+        //     }
+        //     var ch=prompt('enter stop for the break')
+        // }while(ch!='stop')
+
+        // console.log(max,"test");
+
+        // reverse a number
+
+
+
+        var num='7896676'
+        var z=''
+        while(num!=0)
+        {
+            var r=num%10;
+            var z=z+r
+            num=parseInt(num/10)
+        }
+        console.log(z);
+
+
+
+        // var num =prompt('enter')
+            
+        // while (num>0) {
+        //     var r = num%10
+        //     num = parseInt(num/10)
+        //     console.log(r);
+        // }
+
+
+        // Create a program to check if a given number is prime
+        // var prime=0
+        // var num = 5;
+        // for (i = 2; i <= num; i++) {
+        //     if (num % i == 0 && i!=num) {
+        //         console.log(i,"test");
+        //         prime = 1;
+        //     }
+        // }
+        // if (prime == '0') {
+        //     alert('number is prime')
+        // }
+        // else {
+        //     alert('number is not prime')
+        // }
+
+        // GCD of two numbers using a while loop
+
+//         var num1=prompt('entre the num 1')
+//         var num2=prompt('entre the num 2')
+// var gcd=1;
+//         for(i=2;i<=num1;i++)
+//         {
+//             if(num1%i==0 && num2%i==0)
+//             {
+//                 gcd=i
+//             }
+//         }
+//         console.log(gcd);
+
+
+// var end=prompt('enter the end point')
+// var sum=0;
+// for(i=2;i<=end;i+=2)
+// {
+//     sum=sum+i
+// }
+// console.log(sum,"test")
+
+
+
+// palindrome using a while loop like 121
+       
+// var num=prompt("Enter the number")
+// var copy=num;
+//         var z=''
+//         while(num!=0)
+//         {
+//             var r=num%10;
+//             var z=z+r
+//             num=parseInt(num/10)
+//         }
+//         if(copy==z)
+//         {
+//             alert('num is palimdrome')
+//         }
+//         else{
+//             alert('num is not palimdrome')
+//         }
+//         console.log(copy ,"test");
+//         console.log(z);
+
+
+// var end=10;
+// for(i=0;i<=end;i++)
+// {
+//     console.log(i*i )
+// }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

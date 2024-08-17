@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+
+//   var a=+prompt('here')
+// function table(a,b) {
+//     for (let i=0; i < b; i++) {
+//         console.log(`${a} ${i} = ${a*i}`);    }
+// }
+
+// table(+prompt(),+prompt())
+
+
+
+// function print(num) {
+//     if (num%2==0) {
+//         console.log(`${num}`,"number is even" );
+//     }
+//     else{
+//         console.log(`${num}`,"number is odd" );
+//     }
+// }
+
+// print(+(prompt("Put any number")))
+
+// for(a=0;a<=10;a++){
+// print(+(prompt("Put any number")))
+// }
+
+
+
+
+// ........................1
+
+// Write a function that takes a number as an argument and returns "even" or "odd".
+
+
+
+// function print(num) {
+//     // return num % 2 == 0
+//         if (num%2==0) {
+//       return `${num} "even"`
+//     }
+//     else{
+//       return `${num} "odd"`
+//     }
+// }
+
+
+// var z=print(+(prompt("Put any number")))
+// console.log(z);
+
+
+
+// ........................2
+
+
+// Write a function that prints numbers from 1 to 100. For multiples of 3,
+// print "Fizz"; for multiples of 5, print 
+// "Buzz"; for numbers which are multiples of both 3 and 5, print "FizzBuz"
+
+
+// function print(a,b) {
+//     for (let a = 1; a <= b; a++) {
+//         if (a%3==0) {
+//             console.log(`${a}`,"Fizz");
+//         }
+//         if (a%5==0) {
+//             console.log(`${a}`,"Buzz");
+//         } 
+//         if (a%3==0 && a%5==0){
+//             console.log(`${a}`,"FizzBuz");
+//         }
+        
+//     }
+// }
+
+// print(1,100)
+
+
+
+// ........................3
+
+
+
+// Write a function that takes a student's score as a parameter and
+//  returns their grade. Use the typical grading scale (A, B, C, D, F)
+
+
+// function print(a) {
+//     switch (true) {
+//         case a<33:
+//             console.log(`${a}`,"Your grade is F");
+//             break;
+//             case a>33 && a<50:
+//             console.log(`${a}`,"Your grade is D");
+//             break;
+//             case a>50 && a<70:
+//             console.log(`${a}`,"Your grade is C");
+//             break;
+    
+//             case a>70 && a<85:
+//             console.log(`${a}`,"Your grade is B");
+//             break;
+//             case a>85 && a<=100:
+//             console.log(`${a}`,"Your grade is A");
+//             break;
+//         default:
+//         console.log(`${a}`,"Your grade is only 100");
+//             break;
+//     }
+        
+// }
+
+// print(+(prompt("here enter your grade")))
+
+
+
+
+// ........................4
+
+// Write a function that takes a number as a parameter and
+//  returns "positive," "negative," or "zero" based on the input
+
+
+// function print(a) {
+//     switch (true) {
+//         case a>0:
+//             return `${a},"A is positive"`
+//             break;
+//             case a<0:
+//             return `${a},"A is Negative"`
+//             break;
+//         default:
+//         return `${a},"A is Zero"`
+//         break;
+//     }
+        
+// }
+
+// var z=print(+(prompt("here enter your grade")))
+// console.log(z);
+
+
+
+// ...................5
+
+// Write a function to find the GCD of two numbers.
+
+
+// function p(a,b) {
+//     // var a=+prompt("Put small number");
+//     // var b=+prompt("Put big number");
+//     var GCD=0;
+//     for (let c = 1; c <= b; c++) {
+//         if (a%c==0 && b%c==0) {            
+//             GCD=c
+//         }
+//     }
+//     console.log(GCD);
+// }
+ 
+// p(+prompt("Put small number"),+prompt("Put big number"))
+
+
+
+
+// .....................6
+
+// Create a function that takes a range of numbers as 
+// parameters and prints all the prime numbers within that range.
+
+
+
+
+function p(a) {
+    var b=0;
+    for (let i = 2; i < a; i++) {
+        if (a%i==0) {
+        b=1
+        break;
+      }
+    }
+if (b==0) {
+    console.log("prine number")
+}
+else{
+    console.log("not prine number")
+}
+}
+
+p(+(prompt("Put number")))
+
+
+
+
+// function p(a,b) {
+//     var status = 0;
+//     for (let index = a; index < b; index++) {
+//         for (let i = 2; i < b; i++) {
+//             if (a>b) {
+//                 console.log(a)
+//                  ++status
+//             }
+           
+            
+//         }
+//     }
+//     if (status==0) {
+//         console.log("prime munber")
+//     }
+//     else{
+//         console.log("not prime munber")
+//     }
+// }
+
+
+// p(+(prompt("enter the starting number"),prompt("enter the eanding number")))
+
+
+
+
+
+
+
+
+
+
+// function p(a) {
+//     var b=a;
+//      var sum=0
+//     while (a>0) {
+//         var R=a%10
+//         sum=sum*10+R
+//         a=Math.floor(a/10)
+//     }
+//     console.log(sum);
+// if (b==sum) {
+//     console.log("Winner")
+// }
+// else{
+//     console.log("losser")
+// }
+// }
+
+// p(+(prompt("put the number")))
+
+
+
+
+
+
+// var num=+prompt("put")
+// var b=num
+// var sum=0
+// while (num>0) {
+//     var r=num%10
+//     sum=sum*10+r
+//     num=Math.floor(num/10)
+
+// }
+// console.log(sum);
+// if (b==sum) {
+//    console.log("Winner"); 
+// }
+// else{
+//    console.log("losser"); 
+// }
+
+
+
+// var a=[2,5,7,9,3,1,21,81,,67,75,80,100];
+// var z=a.filter((ele) =>{
+//     if (ele%3==0) {
+//         return ele
+//     }
+// })
+// console.log(z)
+// var x=z.map((el)=>{
+//     return el+5
+// })
+// console.log(x)
+
+// ......................short way
+// var a=[2,5,7,9,3,1,21,81,,67,75,80,100];
+//  var z=a.filter(ele=>ele%3==0)
+//  console.log(z);
+
+
+
+// var z=a.map((ele) =>{
+//     if (ele%5==0) {
+//         return ele
+//     }
+// })
+// console.log(z)
+// z.map((el)=>{
+//     console.log(el+20);
+// })
+
+
+
+// .....................short way
+// var a=[2,5,7,9,3,1,21,81,,67,75,80,100];
+//  var z=a.map(ele=>ele%5==0?ele+20:ele)
+//  console.log(z)
+
+
+
+
+
+
+// Implement a function that finds the maximum value in an array.
+
+
+
+// function mx(a) {
+//     var store=0;
+// a.forEach(ele => {
+//     if (ele>store) {
+//         store=ele
+//     }
+// });
+// console.log(store);
+// }
+
+// mx([1,2,4,5,67,8,2,99,6,9,19,4])
+
+
+
+
+// function mx(a) {
+//     var store=0;
+// var z=a.filter(ele => {
+//     if (ele>store) {
+//         store=ele
+//         return store
+//     }
+// });
+// console.log(z);
+// }
+
+// mx([1,2,4,5,67,8,2,99,6,9,19,4])
+
+
+
+
+
+// Write a function that takes three numbers as parameters and returns the maximum value
+
+
+
+// function pr(a,b,c) {
+//     if (a>b && b>c) {
+//         return a
+//     }
+//     if (c>a && c>b) {
+//         return c
+//     }
+//     if (b>a && b>c) {
+//         return b
+//     }
+// }
+
+
+// var z=pr(+prompt("put value"),+prompt("put value"),+prompt("put value"))
+// console.log(z)
+
+
+
+
+// function pr(a,b,c) {
+//     return Math.max(a,b,c)
+// }
+
+// var z=pr(+prompt("put value"),+prompt("put value"),+prompt("put value"))
+// console.log(z)
+
+
+
+// Implement a function that takes an array of numbers as a parameter and returns the smallest number
+
+// var a=[1,2,4,5,67,8,2,99,6,2,19,4];
+// var z=Math.min(...a)
+// console.log(z);
+
+
+
+
+// Create a function to remove duplicate elements from an array.
+
+
+// var a=[1,2,4,5,67,99,8,2,99,6,2,19,4];
+// var b=[...new Set(a)]
+// console.log(b);
+
+
+
+
+// Write a function that takes an array and an element as parameters, then returns true if 
+// the element is present in the array, and false otherwise.
+
+// var a=[1,2,4,5,67,99,8,2,99,6,2,19,4];
+// var b=+prompt("Enter any number")
+// var z=a.map(ele=>ele==b?"true":"fales")
+// console.log(z);
+
+
+
+// var z=a.map(ele=>{
+//     if (ele==b) {
+//         return "true"
+//     }
+//     else{
+//         return "fales"
+//     }
+// })
+// console.log(z);
+
+
+
+
+// var a=+prompt("enter the number");
+// var b=+prompt("enter the small number");
+// var c=+prompt("enter the big number");
+
+// for (let i = b; i <= c; i++) {
+//     // console.log(i);
+//     if (a==i) {
+//         console.log("true");
+//     }
+//     else{
+//         console.log("fales");
+//     }
+    
+// }
+
+
+
+
+// var a={
+//     Name:"Muhammad Mamoon",
+//     age:18,
+//     adress:"wertyuiop",
+//     Father_Name:"Ghulam Mustafa",
+//     Phone_number:"234567890",
+// }
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
+
+
+
+
+// var a=[
+//     {
+//     Name:"Muhammad Mamoon",
+//     age:18,
+//     Emp:"clirk",
+//     Salary:45000
+// },
+// {
+//     Name:"Muhammad Mamoon",
+//     age:20,
+//     Emp:"clirk",
+//     Salary:25000
+// },
+// {
+//     Name:"Muhammad Mamoon",
+//     age:24,
+//     Emp:"boss",
+//     Salary:70000
+// },
+// {
+//     Name:"Muhammad Mamoon",
+//     age:25,
+//     Emp:"Imploy",
+//     Salary:30000
+// },
+// {
+//     Name:"Usman",
+//     age:60,
+//     Emp:"Imploy",
+//     Salary:50000
+// },
+// {
+//     Name:"Jawad",
+//     age:18,
+//     Emp:"Manger",
+//     Salary:30000
+// },
+//     {
+//     Name:"Mazil",
+//     age:50,
+//     Emp:"clirk",
+//     Salary:32000
+// },
+// {
+//     Name:"Saif",
+//     age:18,
+//     Emp:"clirk",
+//     Salary:45000
+// }
+// ]
+
+// var z=a.filter(ele=>{
+    
+//     if (ele.Emp=="Manger") {
+//          return ele
+//     }
+   
+// })
+// console.log(z);
+
+
+
+// var z=a.filter(ele=>{
+    
+//     if (ele.Salary>40000) {
+//          return ele
+//     }
+   
+// })
+// console.log(z);
+
+
+
+
+
+//  var z=a.filter(ele=>{
+    
+//     if (ele.Salary>50000 && ele.Salary<75000) {
+//          return ele
+//     }
+   
+// })
+// console.log(z);
+
+
+
+
+
+// var z=a.map(ele=>{
+    
+//     if (ele.age>50) {
+//          var b=ele.Salary
+//          var c=b*15/100
+//          ele.Salary=b+c
+//          return ele;
+//     }
+//     else{
+//         return ele
+//     }
+// })
+// console.log(z);
+
+
+// var z=a.map(ele=>{
+    
+//     if (ele.age<50) {
+//          var b=ele.Salary
+//          ele.Salary=b+500
+//          return ele
+//     }
+//     else{
+//         return ele
+//     }
+// })
+// console.log(z);
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
